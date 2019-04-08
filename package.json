@@ -8,14 +8,14 @@
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^4.0.4",
-    "sirv-cli": "^0.2.3",
+    "browser-sync": "^2.26.0",
     "svelte": "^2.16.1"
   },
   "scripts": {
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
-    "start": "sirv public",
-    "start:dev": "sirv public --dev"
+    "start": "browser-sync public -w --no-ghost-mode",
+    "start:dev": "browser-sync public -w --no-ghost-mode"
   }
 }
